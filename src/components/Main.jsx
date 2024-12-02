@@ -11,7 +11,16 @@ export default function Main() {
 					))}
 				</ul>
 
-				<Card />
+				<div className="container">
+					{languages.map((language) => (
+						<Card
+							key={language.id}
+							id={language.id}
+							title={language.title}
+							description={language.description}
+						/>
+					))}
+				</div>
 			</section>
 		</>
 	);
